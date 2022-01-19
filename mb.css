@@ -1,0 +1,81 @@
+/* horizontal menu bar */
+ul.mbh {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+
+}
+ul.mbh li {
+	float: left;
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+ul.mbh ul li {
+	float: none;
+	position: relative;
+	border-bottom: 1px solid #9CC; /* fixes gap problem in IE */
+}
+/* separator to mark end of menu group */
+ul.mbh ul li.end {
+	border-bottom: 1px dashed #399;
+}
+ul.mbh li ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+	top: 0;
+	left: 0;
+	background: #9CC;
+	z-index: 2;
+}
+ul.mbh ul ul {
+	margin-left: .2em;
+	position: absolute;
+	top: 0; /* if using borders, -1px to align top borders */
+	left: 9em;
+}
+
+ul.mbh li a:link,
+ul.mbh li a:visited,
+ul.mbh li a:hover,
+ul.mbh li a:active {
+	display: block;
+	padding: .2em .5em;
+	text-decoration: none;
+	background: #00008B;
+	color: #FFFFFF;
+
+}
+ul.mbh li a:hover,
+ul.mbh li a:active {
+	background: #399;
+	color: #FFF;
+}
+ul.mbh ul li a:link,
+ul.mbh ul li a:visited,
+ul.mbh ul li a:hover,
+ul.mbh ul li a:active {
+	width: 8em;
+}
+
+ul.mbh ul li a.hidden:link,
+ul.mbh ul li a.hidden:visited {
+	background: #9CC url(mb.gif) 100% -12px no-repeat;
+}
+ul.mbh li a.visible:link,
+ul.mbh li a.visible:visited,
+ul.mbh li a.visible:hover,
+ul.mbh li a.visible:active {
+	background: #399;
+	color: #FFF;
+}
+ul.mbh ul li a.visible:link,
+ul.mbh ul li a.visible:visited,
+ul.mbh ul li a.visible:hover,
+ul.mbh ul li a.visible:active {
+	background: #399 url(mb.gif) 100% -62px no-repeat;
+}
+
